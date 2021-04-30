@@ -45,6 +45,14 @@ ruby mkChConvTable.rb *.json > ch_conv_table.h
 
 OutputSample/ 以下に出力例があるので、そちらを参照。
 
+## 利用方法
+
+生成したチャンネル情報ファイルを利用出来る recdvb (dogeel/recdvb のfork)を
+https://github.com/kaikoma-soft/recdvb に用意しました。
+
+チャンネル情報に変更があった場合は、こちらの ch_conv_table.h を置き換えれば
+直ぐに対応出来ます。
+
 
 ## 動作確認環境
 
