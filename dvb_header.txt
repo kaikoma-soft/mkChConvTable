@@ -1,0 +1,29 @@
+//
+// 変換テーブル
+//
+#define  BS_01  0
+#define  BS_03  1
+#define  BS_05  2
+#define  BS_07  3
+#define  BS_09  4
+#define  BS_11  5
+#define  BS_13  6
+#define  BS_15  7
+#define  BS_17  8
+#define  BS_19  9
+#define  BS_21  10
+#define  BS_23  11
+#define  CS_02  12
+#define  CS_04  13
+#define  CS_06  14
+#define  CS_08  15
+#define  CS_10  16
+#define  CS_12  17
+#define  CS_14  18
+#define  CS_16  19
+#define  CS_18  20
+#define  CS_20  21
+#define  CS_22  22
+#define  CS_24  23
+
+ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {

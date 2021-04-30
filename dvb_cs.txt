@@ -1,0 +1,14 @@
+
+    { CS_02, CHTYPE_SATELLITE, 0, 0x6020, "CS2" },  /* ND2 */
+    { CS_04, CHTYPE_SATELLITE, 0, 0x7040, "CS4" },  /* ND4 */
+    { CS_06, CHTYPE_SATELLITE, 0, 0x7060, "CS6" },  /* ND6 */
+    { CS_08, CHTYPE_SATELLITE, 0, 0x6080, "CS8" },  /* ND8 */
+    { CS_10, CHTYPE_SATELLITE, 0, 0x60a0, "CS10"},  /* ND10 */
+    { CS_12, CHTYPE_SATELLITE, 0, 0x70c0, "CS12"},  /* ND12 */
+    { CS_14, CHTYPE_SATELLITE, 0, 0x70e0, "CS14"},  /* ND14 */
+    { CS_16, CHTYPE_SATELLITE, 0, 0x7100, "CS16"},  /* ND16 */
+    { CS_18, CHTYPE_SATELLITE, 0, 0x7120, "CS18"},  /* ND18 */
+    { CS_20, CHTYPE_SATELLITE, 0, 0x7140, "CS20"},  /* ND20 */
+    { CS_22, CHTYPE_SATELLITE, 0, 0x7160, "CS22"},  /* ND22 */
+    { CS_24, CHTYPE_SATELLITE, 0, 0x7180, "CS24"},  /* ND24 */
+
