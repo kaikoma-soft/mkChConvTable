@@ -1,0 +1,14 @@
+
+    {  12, CHTYPE_SATELLITE, 0, "CS2"},  /* ND2  */
+    {  13, CHTYPE_SATELLITE, 0, "CS4"},  /* ND4  */
+    {  14, CHTYPE_SATELLITE, 0, "CS6"},  /* ND6  */
+    {  15, CHTYPE_SATELLITE, 0, "CS8"},  /* ND8  */
+    {  16, CHTYPE_SATELLITE, 0, "CS10"}, /* ND10 */
+    {  17, CHTYPE_SATELLITE, 0, "CS12"}, /* ND12 */
+    {  18, CHTYPE_SATELLITE, 0, "CS14"}, /* ND14 */
+    {  19, CHTYPE_SATELLITE, 0, "CS16"}, /* ND16 */
+    {  20, CHTYPE_SATELLITE, 0, "CS18"}, /* ND18 */
+    {  21, CHTYPE_SATELLITE, 0, "CS20"}, /* ND20 */
+    {  22, CHTYPE_SATELLITE, 0, "CS22"}, /* ND22 */
+    {  23, CHTYPE_SATELLITE, 0, "CS24"}, /* ND24 */
+
