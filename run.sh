@@ -1,6 +1,6 @@
 #!/bin/sh
 
-time="120"
+time="300"
 
 for ch in BS15_0 CS4 CS2
 do
