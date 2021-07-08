@@ -43,7 +43,13 @@ ruby mkChConvTable.rb --recpt1 Json/*.json > ch_conv_table_pt1.h
 
 ## 実行結果
 
-Output/ 以下に出力例があるので、そちらを参照。
+Output/ 以下に出力例があるので、そちらを参照して下さい。
+
+|  ファイル名          |      説明       |
+|----------------------|--------------------|
+| ch_conv_table_dvb.h  | recdvb 用 チャンネル情報ファイル|
+| ch_conv_table_pt1.h  | recpt1 用   〃  |
+ 
 
 ## 利用方法
 
