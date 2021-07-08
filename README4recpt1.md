@@ -15,7 +15,7 @@ ruby mkChConvTable.rb --recpt1 *.json > ch_conv_table_pt1.h
 % git clone https://github.com/stz2012/recpt1.git .
 % cd recpt1
 % cp (1)のディレクトリ/ch_conv_table_pt1.h .
-% patch -p1 < (1)のディレクトリ/patch4recpt1.txt
+% patch -p1 < (1)のディレクトリ/Misc/patch4recpt1.txt
 ```
 
 1. 後は普通にコンパイル

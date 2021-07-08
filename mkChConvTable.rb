@@ -107,8 +107,9 @@ class MkChConvTable
   end
 
   def cat(fname)
-    if test( ?f, fname )
-      File.open( fname ) do |fp|
+    path = "Template/" + fname
+    if test( ?f, path )
+      File.open( path ) do |fp|
         puts( fp.read )
       end
     else
