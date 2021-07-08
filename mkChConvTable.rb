@@ -14,7 +14,7 @@ $opt = {
 }
 
 $pname   = File.basename( $0 )
-$version = "1.0.0"
+$version = "1.0.1"
 
 def usage()
     usageStr = <<"EOM"
@@ -42,7 +42,6 @@ end
 class ChData
 
   attr_reader   :id ,:tsid, :svid, :name, :tp, :slot, :band, :name2
-  
   def initialize( data )
     @id    = data["id"]
     @tsid  = data["transport_stream_id"]
@@ -65,9 +64,10 @@ class MkChConvTable
     usage() if argv.size == 0
     
     @chList = []
+    @svidList = {}
     argv.each do |fname|
       if test( ?f, fname )
-        readJson(fname, @chList)
+        readJson(fname, @chList, @svidList)
       end
     end
 
@@ -167,7 +167,7 @@ class MkChConvTable
   #
   #  json ファイルの読み込み
   #
-  def readJson( fname, chList)
+  def readJson( fname, chList, svidList )
 
     File.open( fname, "r" ) do |fp|
       str = fp.read
@@ -176,7 +176,12 @@ class MkChConvTable
         return false
       end
       data.each do |d1|
-        chList << ChData.new( d1 )
+        tmp = ChData.new( d1 )
+        svidList[ tmp.band ] ||= {}
+        if svidList[ tmp.band ][ tmp.svid ] == nil
+          chList << tmp
+          svidList[ tmp.band ][ tmp.svid ] = true
+        end
       end
     end
     true
