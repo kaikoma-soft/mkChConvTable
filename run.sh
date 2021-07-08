@@ -10,6 +10,7 @@ do
     fi
 done
 
-ruby mkChConvTable.rb *.json > ch_conv_table.h
+ruby mkChConvTable.rb --recdvb *.json > ch_conv_table_dvb.h
+ruby mkChConvTable.rb --recpt1 *.json > ch_conv_table_pt1.h
 
     

@@ -4,7 +4,7 @@
 
 本プログラムは、
 放送波の EPG データよりチャンネル情報を取得し、
-recdvb 用のチャンネル情報のソースを生成することにより
+recdvb/recpt1 用のチャンネル情報のソースを生成することにより
  BS/CS 放送局の増減、トランポンダーの移動等が起きた時の
 対応を容易にします。
 
@@ -12,7 +12,7 @@ recdvb 用のチャンネル情報のソースを生成することにより
 ## 実行に必要な環境
 
 * BS/CS が受信出来るチューナーカード(PT2 等)
-* チューナープログラム (recdvb 等)
+* チューナープログラム (recdvb,recpt1 等)
 * ruby   2.5.1 以上
 * epgdump ( https://github.com/Piro77/epgdump を推奨 )
 
@@ -38,7 +38,8 @@ do
     fi
 done
 
-ruby mkChConvTable.rb *.json > ch_conv_table.h
+ruby mkChConvTable.rb --recdvb *.json > ch_conv_table_dvb.h
+ruby mkChConvTable.rb --recpt1 *.json > ch_conv_table_pt1.h
 ```
 
 ## 実行結果
@@ -47,12 +48,13 @@ OutputSample/ 以下に出力例があるので、そちらを参照。
 
 ## 利用方法
 
-生成したチャンネル情報ファイルを利用出来る recdvb (dogeel/recdvb のfork)を
-https://github.com/kaikoma-soft/recdvb に用意しました。
+* 生成したチャンネル情報ファイルを利用出来る recdvb (dogeel/recdvb のfork)を
+  https://github.com/kaikoma-soft/recdvb に用意しました。
+  チャンネル情報に変更があった場合は、こちらの ch_conv_table_dvb.h
+を上書きすれば直ぐに対応出来ます。
 
-チャンネル情報に変更があった場合は、こちらの ch_conv_table.h を置き換えれば
-直ぐに対応出来ます。
-
+* recpt1(stz版) に適用する方法は README4recpt1.md
+  に記述しましたので、そちらを参照して下さい。
 
 ## 動作確認環境
 
