@@ -288,5 +288,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2021-06-01 10:15:30 +0900)
+// created by mkChConvTable.rb (2021-07-08 16:10:41 +0900)
 // BS = 35, CS = 55
