@@ -1,6 +1,6 @@
 #!/bin/sh
 
-time="300"
+time="600"
 for ch in BS15_0 CS4 CS2
 do
     if [ ! -f Json/${ch}.json ]
