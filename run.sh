@@ -1,11 +1,14 @@
 #!/bin/sh
 
 time="600"
+#PROG="recdvb"
+PROG="recpt1"
+
 for ch in BS15_0 CS4 CS2
 do
     if [ ! -f Json/${ch}.json ]
     then
-        recdvb --sid epg $ch $time - | epgdump json - Json/${ch}.json
+        $PROG --sid epg $ch $time - | epgdump json - Json/${ch}.json
     fi
 done
 
