@@ -29,30 +29,28 @@
 ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_01, CHTYPE_SATELLITE, 0, "151"},  /* BS朝日1 */
     { BS_01, CHTYPE_SATELLITE, 1, "161"},  /* BS-TBS */
+    { BS_01, CHTYPE_SATELLITE, 1, "162"},  /* BS-TBS */
     { BS_01, CHTYPE_SATELLITE, 2, "171"},  /* BSテレ東 */
     { BS_01, CHTYPE_SATELLITE, 2, "172"},  /* BSテレ東2 */
+    { BS_01, CHTYPE_SATELLITE, 2, "777"},  /* 株価情報 */
     { BS_03, CHTYPE_SATELLITE, 0, "191"},  /* WOWOWプライム */
-    { BS_03, CHTYPE_SATELLITE, 1, "103"},  /* NHKBSプレミアム */
+    { BS_03, CHTYPE_SATELLITE, 1, "236"},  /* BSアニマックス */
+    { BS_03, CHTYPE_SATELLITE, 2, "251"},  /* BS釣りビジョン */
     { BS_05, CHTYPE_SATELLITE, 0, "192"},  /* WOWOWライブ */
     { BS_05, CHTYPE_SATELLITE, 1, "193"},  /* WOWOWシネマ */
     { BS_09, CHTYPE_SATELLITE, 0, "211"},  /* BS11イレブン */
-    { BS_09, CHTYPE_SATELLITE, 1, "200"},  /* スターチャンネル1 */
-    { BS_09, CHTYPE_SATELLITE, 1, "800"},  /* スターチャンネル */
     { BS_09, CHTYPE_SATELLITE, 2, "222"},  /* BS12トゥエルビ */
-    { BS_11, CHTYPE_SATELLITE, 1, "241"},  /* BSスカパー！ */
-    { BS_11, CHTYPE_SATELLITE, 1, "840"},  /* スカパー！ガイド */
-    { BS_11, CHTYPE_SATELLITE, 2, "231"},  /* 放送大学ex */
-    { BS_11, CHTYPE_SATELLITE, 2, "232"},  /* 放送大学on */
-    { BS_11, CHTYPE_SATELLITE, 2, "531"},  /* 放送大学ラジオ */
-    { BS_11, CHTYPE_SATELLITE, 3, "251"},  /* BS釣りビジョン */
     { BS_13, CHTYPE_SATELLITE, 0, "141"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 0, "142"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 1, "181"},  /* BSフジ・181 */
-    { BS_13, CHTYPE_SATELLITE, 2, "236"},  /* BSアニマックス */
-    { BS_15, CHTYPE_SATELLITE, 0, "101"},  /* NHKBS1 */
-    { BS_15, CHTYPE_SATELLITE, 0, "102"},  /* NHKBS1 */
-    { BS_15, CHTYPE_SATELLITE, 1, "201"},  /* スターチャンネル2 */
-    { BS_15, CHTYPE_SATELLITE, 1, "202"},  /* スターチャンネル3 */
+    { BS_13, CHTYPE_SATELLITE, 1, "182"},  /* BSフジ・182 */
+    { BS_13, CHTYPE_SATELLITE, 2, "231"},  /* 放送大学テレビ */
+    { BS_13, CHTYPE_SATELLITE, 2, "232"},  /* 放送大学テレビ */
+    { BS_13, CHTYPE_SATELLITE, 2, "531"},  /* 放送大学ラジオ */
+    { BS_15, CHTYPE_SATELLITE, 0, "101"},  /* NHK BS */
+    { BS_15, CHTYPE_SATELLITE, 0, "102"},  /* NHK BS */
+    { BS_15, CHTYPE_SATELLITE, 1, "200"},  /* スターチャンネル */
+    { BS_15, CHTYPE_SATELLITE, 1, "800"},  /* スターチャンネル */
     { BS_19, CHTYPE_SATELLITE, 0, "245"},  /* J SPORTS 4 */
     { BS_19, CHTYPE_SATELLITE, 1, "242"},  /* J SPORTS 1 */
     { BS_19, CHTYPE_SATELLITE, 2, "243"},  /* J SPORTS 2 */
@@ -112,22 +110,22 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { CS_14, CHTYPE_SATELLITE, 0, "310" },  /* スーパー！ドラマTV */
     { CS_14, CHTYPE_SATELLITE, 0, "342" },  /* ヒストリーチャンネル */
     { CS_16, CHTYPE_SATELLITE, 0, "290" },  /* SKY STAGE */
-    { CS_16, CHTYPE_SATELLITE, 0, "311" },  /* AXN 海外ドラマ */
-    { CS_16, CHTYPE_SATELLITE, 0, "316" },  /* AXNミステリー */
+    { CS_16, CHTYPE_SATELLITE, 0, "311" },  /* アクションチャンネル */
+    { CS_16, CHTYPE_SATELLITE, 0, "316" },  /* ミステリーチャンネル */
     { CS_16, CHTYPE_SATELLITE, 0, "321" },  /* スペシャプラス */
     { CS_16, CHTYPE_SATELLITE, 0, "333" },  /* AT−X */
-    { CS_16, CHTYPE_SATELLITE, 0, "353" },  /* BBCワールド */
+    { CS_16, CHTYPE_SATELLITE, 0, "353" },  /* BBCニュース */
     { CS_18, CHTYPE_SATELLITE, 0, "240" },  /* ムービープラス */
     { CS_18, CHTYPE_SATELLITE, 0, "262" },  /* ゴルフネットワーク */
-    { CS_18, CHTYPE_SATELLITE, 0, "305" },  /* 銀河◆歴ドラ・サスペ */
-    { CS_18, CHTYPE_SATELLITE, 0, "314" },  /* 女性ch／LaLa */
+    { CS_18, CHTYPE_SATELLITE, 0, "305" },  /* チャンネル銀河 */
+    { CS_18, CHTYPE_SATELLITE, 0, "314" },  /* LaLaTV */
     { CS_20, CHTYPE_SATELLITE, 0, "307" },  /* フジテレビONE */
     { CS_20, CHTYPE_SATELLITE, 0, "308" },  /* フジテレビTWO */
     { CS_20, CHTYPE_SATELLITE, 0, "309" },  /* フジテレビNEXT */
     { CS_20, CHTYPE_SATELLITE, 0, "322" },  /* スペースシャワーTV */
     { CS_22, CHTYPE_SATELLITE, 0, "161" },  /* QVC */
     { CS_22, CHTYPE_SATELLITE, 0, "297" },  /* TBSチャンネル2 */
-    { CS_22, CHTYPE_SATELLITE, 0, "312" },  /* FOX */
+    { CS_22, CHTYPE_SATELLITE, 0, "312" },  /* Dlife */
     { CS_22, CHTYPE_SATELLITE, 0, "351" },  /* TBS NEWS */
     { CS_24, CHTYPE_SATELLITE, 0, "223" },  /* 映画・chNECO */
     { CS_24, CHTYPE_SATELLITE, 0, "257" },  /* 日テレジータス */
@@ -197,29 +195,27 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
 
 
 char *helpChList[] = {
-	"101 ch : NHKBS1",
-	"102 ch : NHKBS1",
-	"103 ch : NHKBSプレミアム",
+	"101 ch : NHK BS",
+	"102 ch : NHK BS",
 	"141 ch : BS日テレ",
 	"142 ch : BS日テレ",
 	"151 ch : BS朝日1",
 	"161 ch : BS-TBS",
+	"162 ch : BS-TBS",
 	"171 ch : BSテレ東",
 	"172 ch : BSテレ東2",
 	"181 ch : BSフジ・181",
+	"182 ch : BSフジ・182",
 	"191 ch : WOWOWプライム",
 	"192 ch : WOWOWライブ",
 	"193 ch : WOWOWシネマ",
-	"200 ch : スターチャンネル1",
-	"201 ch : スターチャンネル2",
-	"202 ch : スターチャンネル3",
+	"200 ch : スターチャンネル",
 	"211 ch : BS11イレブン",
 	"222 ch : BS12トゥエルビ",
-	"231 ch : 放送大学ex",
-	"232 ch : 放送大学on",
+	"231 ch : 放送大学テレビ",
+	"232 ch : 放送大学テレビ",
 	"234 ch : グリーンチャンネル",
 	"236 ch : BSアニマックス",
-	"241 ch : BSスカパー！",
 	"242 ch : J SPORTS 1",
 	"243 ch : J SPORTS 2",
 	"244 ch : J SPORTS 3",
@@ -232,8 +228,8 @@ char *helpChList[] = {
 	"263 ch : BSJapanext",
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
+	"777 ch : 株価情報",
 	"800 ch : スターチャンネル",
-	"840 ch : スカパー！ガイド",
 	"",
 	" 55 ch : ショップチャンネル",
 	"101 ch : スカパー！インフォ",
@@ -258,15 +254,15 @@ char *helpChList[] = {
 	"299 ch : テレ朝チャンネル2",
 	"300 ch : 日テレプラス",
 	"301 ch : エンタメ〜テレ",
-	"305 ch : 銀河◆歴ドラ・サスペ",
+	"305 ch : チャンネル銀河",
 	"307 ch : フジテレビONE",
 	"308 ch : フジテレビTWO",
 	"309 ch : フジテレビNEXT",
 	"310 ch : スーパー！ドラマTV",
-	"311 ch : AXN 海外ドラマ",
-	"312 ch : FOX",
-	"314 ch : 女性ch／LaLa",
-	"316 ch : AXNミステリー",
+	"311 ch : アクションチャンネル",
+	"312 ch : Dlife",
+	"314 ch : LaLaTV",
+	"316 ch : ミステリーチャンネル",
 	"317 ch : KBS World",
 	"318 ch : Mnet",
 	"321 ch : スペシャプラス",
@@ -285,7 +281,7 @@ char *helpChList[] = {
 	"343 ch : ナショジオ",
 	"349 ch : 日テレNEWS24",
 	"351 ch : TBS NEWS",
-	"353 ch : BBCワールド",
+	"353 ch : BBCニュース",
 	"354 ch : CNNj",
 	"363 ch : 囲碁・将棋チャンネル",
 	"800 ch : スポーツライブ＋",
@@ -293,5 +289,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2022-03-09 17:56:14 +0900)
-// BS = 37, CS = 55
+// created by mkChConvTable.rb (2024-11-11 11:06:48 +0900)
+// BS = 35, CS = 55
