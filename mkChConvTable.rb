@@ -11,6 +11,7 @@ require 'json'
 $opt = {
   :d => false,
   :type => :recdvb,
+  :extra => false,
 }
 
 $pname   = File.basename( $0 )
@@ -23,6 +24,7 @@ Usage: #{$pname} [Options]  json-file...
   Options:
       --recdvb           recdvb用を生成(デフォルト)
       --recpt1           recpt1用を生成
+      --extra            recpt1時に、スロットのズレを補正する。
 
 #{$pname} ver #{$version}
 EOM
@@ -34,6 +36,7 @@ end
 OptionParser.new do |opt|
   opt.on('--recdvb') { $opt[:type] = :recdvb } # デフォルト
   opt.on('--recpt1') { $opt[:type] = :recpt1 }
+  opt.on('--extra') { $opt[:extra] = true }
   opt.on('--help')   { usage() }
   opt.parse!(ARGV)
 end
@@ -65,12 +68,29 @@ class MkChConvTable
     
     @chList = []
     @svidList = {}
+    @convTable = {}
     argv.each do |fname|
       if test( ?f, fname )
         readJson(fname, @chList, @svidList)
       end
     end
 
+    if $opt[:type] == :recpt1
+      if $opt[:extra] == true
+        extra = "./extra.rb"
+        if test( ?f, extra )
+          require extra
+          if Object.const_defined?(:ExtraPatch) == true
+            if ExtraPatch.class == Hash
+              ExtraPatch.each_pair do |k,v|
+                @convTable[ k ] = v
+              end
+            end
+          end
+        end
+      end
+    end
+    
     @bsTbl = []
     @csTbl = []
     bsFormat1 = "    { BS_%02d, CHTYPE_SATELLITE, %d, 0x%x, \"%d\"},  /* %s */"
@@ -87,7 +107,15 @@ class MkChConvTable
         tsid = r.tsid
         ch = r.tp.sub(/BS/,'').to_i
         if $opt[:type] == :recpt1
-          @bsTbl << sprintf( bsFormat1,ch,r.slot,r.svid,r.name2 )
+          slot = r.slot
+          tmp = sprintf("%s_%d", r.tp, r.slot )
+          if @convTable[ tmp ] != nil
+            #pp "#{tmp} -> #{@convTable[ tmp ]}"
+            if @convTable[ tmp ] =~ /BS(\d+)_(\d+)/
+              slot = $2.to_i
+            end
+          end
+          @bsTbl << sprintf( bsFormat1,ch, slot,r.svid,r.name2 )
         else
           @bsTbl << sprintf( bsFormat1,ch,r.slot,r.tsid,r.svid,r.name2 )
         end
