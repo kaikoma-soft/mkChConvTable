@@ -38,7 +38,7 @@ do
 done
 
 ruby mkChConvTable.rb --recdvb Json/*.json > ch_conv_table_dvb.h
-ruby mkChConvTable.rb --recpt1 Json/*.json > ch_conv_table_pt1.h
+ruby mkChConvTable.rb --recpt1 --extra Json/*.json > ch_conv_table_pt1.h
 ```
 
 ## 実行結果
@@ -58,15 +58,14 @@ Output/ 以下に出力例があるので、そちらを参照して下さい。
   チャンネル情報に変更があった場合は、こちらの ch_conv_table_dvb.h
   を上書きすれば直ぐに対応出来ます。
 
-* recpt1(stz版) に適用する方法は README4recpt1.md
-  に記述しましたので、そちらを参照して下さい。<br>
-  また、stz2012/recpt1 のフォークで適用済みの
-  https://github.com/kaikoma-soft/recpt1
-  も用意したので、そちらを利用する事もできます。
-
+* また stz2012/recpt1 のフォークで適用済みの
+  https://github.com/kaikoma-soft/recpt1 も用意したので、そちらを利用する事も
+  できます。
+  
 * ちなみに、recdvb は、チャンネル情報ファイルに無いチャンネルを選局出来ないので
   新規追加の場合は、修正が必須です。<br>
-  それに対して recpt1 は選局は可能なので、修正は任意です。(-help の放送局一覧に出ないぐらい。)
+  それに対して recpt1 は BSXX_X 形式の選局は可能なので、修正は任意です。
+  (-help の放送局一覧に出ないぐらい。)
 
 ## 動作確認環境
 
@@ -75,8 +74,8 @@ Output/ 以下に出力例があるので、そちらを参照して下さい。
 | 機種         |  AMD Ryzen 7 2700 + MEM 16G |
 | OS           |  Ubuntu 24.04.1 LTS |
 | TVチューナー |  DTV02A-4TS-P
-| ドライバー   |  px4=drv
-| チューナーソフト |  recpt1   rev.147 by stz2012
+| ドライバー   |  px4_drv
+| チューナーソフト |  recpt1
 
 
 ## 変更履歴
@@ -89,6 +88,4 @@ Output/ 以下に出力例があるので、そちらを参照して下さい。
    BS10 の開局に伴い、recpt1 のスロットのズレを補正する --extra オプションを追加
    * BSJapanext(BS23_2) -> BS10(BS15_3 recpt1 は BS15_2 )
    * スターチャンネル   -> BS10スターch(BS15_1)
-   
-   
 
