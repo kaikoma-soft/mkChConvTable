@@ -34,7 +34,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_01, CHTYPE_SATELLITE, 2, "172"},  /* BSテレ東2 */
     { BS_01, CHTYPE_SATELLITE, 2, "777"},  /* 株価情報 */
     { BS_03, CHTYPE_SATELLITE, 0, "191"},  /* WOWOWプライム */
-    { BS_03, CHTYPE_SATELLITE, 0, "791"},  /* ご案内チャンネル */
     { BS_03, CHTYPE_SATELLITE, 1, "236"},  /* BSアニマックス */
     { BS_03, CHTYPE_SATELLITE, 2, "251"},  /* BS釣りビジョン */
     { BS_05, CHTYPE_SATELLITE, 0, "192"},  /* WOWOWライブ */
@@ -49,7 +48,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_13, CHTYPE_SATELLITE, 2, "232"},  /* 放送大学テレビ */
     { BS_13, CHTYPE_SATELLITE, 2, "531"},  /* 放送大学ラジオ */
     { BS_15, CHTYPE_SATELLITE, 0, "101"},  /* NHK BS */
-    { BS_15, CHTYPE_SATELLITE, 0, "102"},  /* NHK BS */
     { BS_15, CHTYPE_SATELLITE, 1, "201"},  /* BS10スターch */
     { BS_15, CHTYPE_SATELLITE, 1, "800"},  /* BS10スターch */
     { BS_15, CHTYPE_SATELLITE, 2, "200"},  /* BS10 */
@@ -97,7 +95,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { CS_08, CHTYPE_SATELLITE, 0, "318" },  /* Mnet */
     { CS_08, CHTYPE_SATELLITE, 0, "349" },  /* 日テレNEWS24 */
     { CS_08, CHTYPE_SATELLITE, 0, "55"  },  /* ショップチャンネル */
-    { CS_10, CHTYPE_SATELLITE, 0, "101" },  /* スカパー！インフォ */
     { CS_10, CHTYPE_SATELLITE, 0, "219" },  /* 衛星劇場 */
     { CS_10, CHTYPE_SATELLITE, 0, "317" },  /* KBS World */
     { CS_10, CHTYPE_SATELLITE, 0, "800" },  /* スポーツライブ＋ */
@@ -197,7 +194,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
 
 char *helpChList[] = {
 	"101 ch : NHK BS",
-	"102 ch : NHK BS",
 	"141 ch : BS日テレ",
 	"142 ch : BS日テレ",
 	"151 ch : BS朝日1",
@@ -230,11 +226,9 @@ char *helpChList[] = {
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
 	"777 ch : 株価情報",
-	"791 ch : ご案内チャンネル",
 	"800 ch : BS10スターch",
 	"",
 	" 55 ch : ショップチャンネル",
-	"101 ch : スカパー！インフォ",
 	"161 ch : QVC",
 	"218 ch : 東映チャンネル",
 	"219 ch : 衛星劇場",
@@ -291,5 +285,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2025-01-11 11:22:44 +0900)
-// BS = 36, CS = 55
+// created by mkChConvTable.rb (2025-02-08 10:14:29 +0900)
+// BS = 34, CS = 54

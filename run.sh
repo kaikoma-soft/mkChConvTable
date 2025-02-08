@@ -1,9 +1,17 @@
 #!/bin/sh
 
 time="600"
-#PROG="recdvb"
-PROG="recpt1"
 
+if [ -d "/dev/dvb/adapter0" ]
+then
+    PROG="recdvb"
+    Opt=""
+else
+    PROG="recpt1"
+    Opt="--scan"
+fi
+echo "$PROG $Opt"
+    
 for ch in BS15_0 CS4 CS2
 do
     if [ ! -f Json/${ch}.json ]
@@ -12,5 +20,4 @@ do
     fi
 done
 
-ruby mkChConvTable.rb --recdvb Json/*.json > ch_conv_table_dvb.h
-ruby mkChConvTable.rb --recpt1 --extra Json/*.json > ch_conv_table_pt1.h
+ruby mkChConvTable.rb $Opt -d Output Json/*.json 
