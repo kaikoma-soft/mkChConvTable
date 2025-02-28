@@ -16,7 +16,7 @@ fi
 
 ruby mkChConvTable.rb --scan -d Output $HOME/raspirec/json/[BC]*.json
 
-if [ $DVB="true" ] 
+if [ "$DVB" = "true" ] 
 then
     sudo modprobe -r $DRV
     sudo modprobe earth_pt1

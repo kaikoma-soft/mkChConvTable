@@ -31,8 +31,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_01, CHTYPE_SATELLITE, 1, 0x4011, "161"},  /* BS-TBS */
     { BS_01, CHTYPE_SATELLITE, 1, 0x4011, "162"},  /* BS-TBS */
     { BS_01, CHTYPE_SATELLITE, 2, 0x4012, "171"},  /* BSテレ東 */
-    { BS_01, CHTYPE_SATELLITE, 2, 0x4012, "172"},  /* BSテレ東2 */
-    { BS_01, CHTYPE_SATELLITE, 2, 0x4012, "777"},  /* 株価情報 */
     { BS_03, CHTYPE_SATELLITE, 0, 0x4030, "191"},  /* WOWOWプライム */
     { BS_03, CHTYPE_SATELLITE, 1, 0x4631, "236"},  /* BSアニマックス */
     { BS_03, CHTYPE_SATELLITE, 2, 0x4632, "251"},  /* BS釣りビジョン */
@@ -48,10 +46,12 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_13, CHTYPE_SATELLITE, 2, 0x46d2, "232"},  /* 放送大学テレビ */
     { BS_13, CHTYPE_SATELLITE, 2, 0x46d2, "531"},  /* 放送大学ラジオ */
     { BS_15, CHTYPE_SATELLITE, 0, 0x40f1, "101"},  /* NHK BS */
+    { BS_15, CHTYPE_SATELLITE, 0, 0x40f1, "102"},  /* NHK BS */
     { BS_15, CHTYPE_SATELLITE, 1, 0x40f2, "201"},  /* BS10スターch */
     { BS_15, CHTYPE_SATELLITE, 1, 0x40f2, "800"},  /* BS10スターch */
     { BS_15, CHTYPE_SATELLITE, 3, 0x48f3, "200"},  /* BS10 */
     { BS_19, CHTYPE_SATELLITE, 0, 0x4730, "245"},  /* J SPORTS 4 */
+    { BS_19, CHTYPE_SATELLITE, 0, 0x4730, "849"},  /* スカパー！ガイド */
     { BS_19, CHTYPE_SATELLITE, 1, 0x4731, "242"},  /* J SPORTS 1 */
     { BS_19, CHTYPE_SATELLITE, 2, 0x4732, "243"},  /* J SPORTS 2 */
     { BS_19, CHTYPE_SATELLITE, 3, 0x4733, "244"},  /* J SPORTS 3 */
@@ -193,13 +193,13 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
 
 char *helpChList[] = {
 	"101 ch : NHK BS",
+	"102 ch : NHK BS",
 	"141 ch : BS日テレ",
 	"142 ch : BS日テレ",
 	"151 ch : BS朝日1",
 	"161 ch : BS-TBS",
 	"162 ch : BS-TBS",
 	"171 ch : BSテレ東",
-	"172 ch : BSテレ東2",
 	"181 ch : BSフジ・181",
 	"182 ch : BSフジ・182",
 	"191 ch : WOWOWプライム",
@@ -224,8 +224,8 @@ char *helpChList[] = {
 	"260 ch : BS松竹東急",
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
-	"777 ch : 株価情報",
 	"800 ch : BS10スターch",
+	"849 ch : スカパー！ガイド",
 	"",
 	" 55 ch : ショップチャンネル",
 	"161 ch : QVC",
@@ -284,5 +284,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2025-02-08 10:14:29 +0900)
+// created by mkChConvTable.rb (2025-02-28 20:36:05 +0900)
 // BS = 34, CS = 54
