@@ -7,7 +7,7 @@ OutFname = {                        # 出力ファイル名
   :scan   => "extra.rb",            # raspirec 向け BS スロット補正データ
 }
 
-RecTime    = 1                      # scan 時の録画時間
+RecTime    = 2                      # scan 時の録画時間
 
 cmd = "recpt1"
 if test(?d, "/dev/dvb/adapter0" )
